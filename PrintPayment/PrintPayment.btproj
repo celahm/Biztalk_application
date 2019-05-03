@@ -66,6 +66,56 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\PaymentDB.xsd">
+      <TypeName>PaymentDB</TypeName>
+      <Namespace>GateControleBadgemaker.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Schema Include="Schemas\MSSQL.xsd">
+      <TypeName>MSSQL</TypeName>
+      <Namespace>GateControleBadgemaker.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\SAPHR.xsd">
+      <TypeName>SAPHR</TypeName>
+      <Namespace>GateControleBadgemaker.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\PrintSystem.xsd">
+      <TypeName>PrintSystem</TypeName>
+      <Namespace>GateControleBadgemaker.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\PaymentOnline.xsd">
+      <SubType>Task</SubType>
+      <TypeName>PaymentDB_Copy</TypeName>
+      <Namespace>GateControleBadgemaker.Schemas</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\Facultities.xsd">
+      <SubType>Task</SubType>
+      <TypeName>PaymentOnline_Copy</TypeName>
+      <Namespace>GateControleBadgemaker.Schemas</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="Maps\PaymentDB_to_MSSQL.btm">
+      <TypeName>PaymentDB_to_MSSQL</TypeName>
+      <Namespace>GateControleBadgemaker.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
 </Project>
